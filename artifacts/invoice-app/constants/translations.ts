@@ -1,0 +1,231 @@
+export type Lang = "ar" | "en";
+
+const translations = {
+  // ── App / Header ───────────────────────────────────────────────
+  appName:          { ar: "W&H",              en: "W&H" },
+  appSub:           { ar: "كيك وشوكولاتة",    en: "Cake & Chocolate" },
+
+  // ── Tabs ───────────────────────────────────────────────────────
+  tabCashier:       { ar: "كاشير",            en: "Cashier" },
+  tabHalwa:         { ar: "حلا زفة",          en: "Wedding" },
+  tabMawali:        { ar: "معجنات",           en: "Savory" },
+  tabChocolate:     { ar: "شوكولاتة",         en: "Chocolate" },
+  tabCake:          { ar: "كيك",             en: "Cake" },
+  tabPackaging:     { ar: "التغليف",          en: "Packaging" },
+  tabArchive:       { ar: "الأرشيف",          en: "Archive" },
+  tabAdmin:         { ar: "المشرف",           en: "Admin" },
+
+  // ── Tab screen titles ──────────────────────────────────────────
+  titleCashier:     { ar: "كاشير",            en: "Cashier" },
+  titleHalwa:       { ar: "حلا زفة و ضيافة",  en: "Wedding Sweets" },
+  titleMawali:      { ar: "معجنات و موالح",   en: "Savory Dept." },
+  titleChocolate:   { ar: "قسم شوكولاتة",     en: "Chocolate Dept." },
+  titleCake:        { ar: "قسم الكيك",        en: "Cake Dept." },
+  titlePackaging:   { ar: "قسم التغليف",      en: "Packaging Dept." },
+  titleArchive:     { ar: "الأرشيف",          en: "Archive" },
+  titleAdmin:       { ar: "المشرف",           en: "Admin" },
+
+  // ── Auth / Employee ────────────────────────────────────────────
+  loginBtn:         { ar: "تسجيل دخول",       en: "Sign In" },
+  employees:        { ar: "الموظفون",          en: "Employees" },
+  selectEmployee:   { ar: "اختيار الموظف",    en: "Select Employee" },
+  addEmployee:      { ar: "إضافة موظف",       en: "Add Employee" },
+  addNewEmployee:   { ar: "إضافة موظف جديد",  en: "Add New Employee" },
+  fullName:         { ar: "الاسم الكامل",     en: "Full Name" },
+  employeeId:       { ar: "الرقم الوظيفي",    en: "Employee ID" },
+  empIdPlaceholder: { ar: "مثال: EMP001",     en: "e.g. EMP001" },
+  jobRole:          { ar: "الدور الوظيفي",    en: "Job Role" },
+  save:             { ar: "حفظ",              en: "Save" },
+  cancel:           { ar: "إلغاء",            en: "Cancel" },
+  delete:           { ar: "حذف",              en: "Delete" },
+  logout:           { ar: "تسجيل خروج",       en: "Sign Out" },
+  noEmployees:      { ar: "لا يوجد موظفون — أضف الآن",  en: "No employees — add one now" },
+
+  roleLabels: {
+    cashier:    { ar: "كاشير",                en: "Cashier" },
+    halwa:      { ar: "حلا زفة و ضيافة",     en: "Wedding Sweets" },
+    mawali:     { ar: "معجنات و موالح",       en: "Savory" },
+    chocolate:  { ar: "شوكولاتة",             en: "Chocolate" },
+    cake:       { ar: "كيك",                  en: "Cake" },
+    packaging:  { ar: "التغليف",              en: "Packaging" },
+    admin:      { ar: "مشرف",                 en: "Supervisor" },
+  },
+
+  // ── Cashier form ───────────────────────────────────────────────
+  customerData:     { ar: "بيانات العميل",     en: "Customer Info" },
+  customerName:     { ar: "اسم العميل",        en: "Customer Name" },
+  customerNamePH:   { ar: "أدخل اسم العميل",  en: "Enter customer name" },
+  customerPhone:    { ar: "رقم الهاتف",        en: "Phone Number" },
+  timingInsurance:  { ar: "التوقيت والتأمين",  en: "Timing & Insurance" },
+  receivedAt:       { ar: "وقت استلام الطلب",  en: "Order Received At" },
+  auto:             { ar: "تلقائي",            en: "Auto" },
+  deliveryTime:     { ar: "وقت التسليم",       en: "Delivery Time" },
+  deliveryTimePH:   { ar: "مثال: 2025-06-01 14:30", en: "e.g. 2025-06-01 14:30" },
+  insurance:        { ar: "مبلغ التأمين",      en: "Insurance Amount" },
+  items:            { ar: "الأصناف",            en: "Items" },
+  itemName:         { ar: "اسم الصنف",         en: "Item Name" },
+  quantity:         { ar: "الكمية",            en: "Qty" },
+  department:       { ar: "القسم",             en: "Dept." },
+  itemPlaceholder:  { ar: "صنف",               en: "Item" },
+  itemNotePH:       { ar: "ملاحظة على",        en: "Note for" },
+  optional:         { ar: "اختياري",           en: "optional" },
+  addItemHalwa:     { ar: "إضافة صنف حلا زفة",  en: "Add Wedding Item" },
+  addItemMawali:    { ar: "إضافة صنف معجنات",  en: "Add Savory Item" },
+  addItemChocolate: { ar: "إضافة شوكولاتة",    en: "Add Chocolate Item" },
+  addItemCake:      { ar: "إضافة صنف كيك",     en: "Add Cake Item" },
+  orderImage:       { ar: "صورة الطلب",        en: "Order Photo" },
+  tapToAddPhoto:    { ar: "اضغط لإضافة صورة",  en: "Tap to add photo" },
+  generalNotes:     { ar: "ملاحظات عامة",      en: "General Notes" },
+  notesPH:          { ar: "أي ملاحظات إضافية...", en: "Any additional notes..." },
+  sendInvoice:      { ar: "إرسال الفاتورة",    en: "Send Invoice" },
+  sending:          { ar: "جاري الإرسال...",   en: "Sending..." },
+  willSendTo:       { ar: "سيتم الإرسال إلى:", en: "Will be sent to:" },
+  itemsCount:       { ar: "صنف",               en: "item(s)" },
+  loginRequired:    { ar: "تسجيل الدخول مطلوب",en: "Login Required" },
+  loginToSend:      { ar: "يجب عليك تسجيل الدخول أولاً قبل إرسال الفاتورة.",
+                      en: "You must sign in before sending an invoice." },
+  loginToAccept:    { ar: "يجب عليك تسجيل الدخول أولاً لاستلام الطلب.",
+                      en: "You must sign in to accept the order." },
+  ok:               { ar: "حسناً",            en: "OK" },
+  sentSuccess:      { ar: "تم الإرسال ✓",     en: "Sent ✓" },
+  sentMsg:          { ar: "تم إرسال الفاتورة!\nأُرسلت الأصناف إلى:",
+                      en: "Invoice sent!\nItems routed to:" },
+  errorTitle:       { ar: "خطأ",              en: "Error" },
+  errorName:        { ar: "الرجاء إدخال اسم العميل", en: "Please enter customer name" },
+  errorPhone:       { ar: "الرجاء إدخال رقم الهاتف", en: "Please enter phone number" },
+  errorItems:       { ar: "الرجاء إضافة صنف واحد على الأقل", en: "Please add at least one item" },
+  errorSend:        { ar: "فشل إرسال الطلب، حاول مرة أخرى", en: "Failed to send, please try again" },
+  cashierLabel:     { ar: "الكاشير:",          en: "Cashier:" },
+  signInFirst:      { ar: "يجب تسجيل الدخول أولاً — اضغط على زر الموظف في الأعلى",
+                      en: "Please sign in first — tap the employee button above" },
+  permissionRequired: { ar: "إذن مطلوب",      en: "Permission Required" },
+  cameraPermission: { ar: "يحتاج التطبيق للوصول إلى الكاميرا",
+                      en: "The app needs camera access" },
+  galleryPermission:{ ar: "يحتاج التطبيق للوصول إلى الصور",
+                      en: "The app needs photo library access" },
+  addPhoto:         { ar: "إضافة صورة",        en: "Add Photo" },
+  chooseSource:     { ar: "اختر مصدر الصورة",  en: "Choose photo source" },
+  camera:           { ar: "الكاميرا",          en: "Camera" },
+  gallery:          { ar: "معرض الصور",        en: "Gallery" },
+  errorDupId:       { ar: "هذا الرقم الوظيفي مستخدم مسبقاً",
+                      en: "This employee ID is already in use" },
+  logoutOf:         { ar: "تسجيل خروج",        en: "Sign out of" },
+  willRecordAs:     { ar: "سيُسجَّل باسمك عند الاستلام",
+                      en: "Will be recorded in your name upon acceptance" },
+
+  // ── Dept screens ───────────────────────────────────────────────
+  deptHalwa:        { ar: "قسم حلا زفة و ضيافة", en: "Wedding Sweets Dept." },
+  deptMawali:       { ar: "قسم معجنات و موالح", en: "Savory & Pastries Dept." },
+  deptChocolate:    { ar: "قسم شوكولاتة",       en: "Chocolate Department" },
+  deptCake:         { ar: "قسم الكيك",          en: "Cake Department" },
+  deptPackaging:    { ar: "قسم التغليف",         en: "Packaging Department" },
+  waitingOrders:    { ar: "طلب بانتظار التحضير", en: "order(s) pending" },
+  noPendingOrders:  { ar: "لا توجد طلبات معلقة ✓", en: "No pending orders ✓" },
+  noOrdersNow:      { ar: "لا توجد طلبات حالياً", en: "No orders right now" },
+  halwaSubtitle:    { ar: "ستظهر أصناف الحلا زفة هنا عند إضافتها من الكاشير",
+                      en: "Wedding sweets items will appear here when added by cashier" },
+  mawaliSubtitle:   { ar: "ستظهر أصناف المعجنات و الموالح هنا عند إضافتها من الكاشير",
+                      en: "Savory & pastry items will appear here when added by cashier" },
+  chocolateSubtitle:{ ar: "ستظهر أصناف الشوكولاتة هنا عند إضافتها من الكاشير",
+                      en: "Chocolate items will appear here when added by cashier" },
+  cakeSubtitle:     { ar: "ستظهر أصناف الكيك هنا عند إضافتها من الكاشير",
+                      en: "Cake items will appear here when added by cashier" },
+  packagingSubtitle:{ ar: "تظهر هنا جميع الفواتير الواردة بكامل تفاصيلها للتغليف",
+                      en: "All incoming orders appear here with full details for packaging" },
+  waiting:          { ar: "انتظار",            en: "Waiting" },
+  preparing:        { ar: "تحضير",            en: "Preparing" },
+
+  // ── Order statuses ─────────────────────────────────────────────
+  statusPending:    { ar: "انتظار",            en: "Pending" },
+  statusInProgress: { ar: "جاري التحضير",      en: "In Progress" },
+  statusDone:       { ar: "تم التسليم",        en: "Delivered" },
+  statusCancelled:  { ar: "ملغي",              en: "Cancelled" },
+  startPrep:        { ar: "▶  بدء التحضير",    en: "▶  Start Preparing" },
+  markDelivered:    { ar: "✓  تم التسليم",     en: "✓  Mark Delivered" },
+  requiresLogin:    { ar: "(يتطلب تسجيل دخول)", en: "(requires login)" },
+
+  // ── DeptOrderCard ──────────────────────────────────────────────
+  itemsLabel:       { ar: "الأصناف",           en: "Items" },
+  deliveryLabel:    { ar: "تسليم:",            en: "Delivery:" },
+  enteredBy:        { ar: "أدخل الطلب:",       en: "Entered by:" },
+  receivedByDept:   { ar: "استلم في القسم:",   en: "Received in dept:" },
+  halwaShort:       { ar: "حلا زفة",           en: "Wedding" },
+  mawaliShort:      { ar: "معجنات",            en: "Savory" },
+  chocolateShort:   { ar: "شوكولاتة",          en: "Chocolate" },
+  cakeShort:        { ar: "كيك",              en: "Cake" },
+
+  // ── Archive ───────────────────────────────────────────────────
+  searchPlaceholder: { ar: "بحث بالرقم أو الاسم أو الهاتف أو الصنف...",
+                       en: "Search by number, name, phone or item..." },
+  all:               { ar: "الكل",             en: "All" },
+  filterByDate:      { ar: "تصفية بالتاريخ (مثال: 2025-01-15)",
+                       en: "Filter by date (e.g. 2025-01-15)" },
+  invoiceCount:      { ar: "فاتورة",           en: "invoice(s)" },
+  noInvoices:        { ar: "لا توجد فواتير",   en: "No Invoices" },
+  noInvoicesSub:     { ar: "لم يتم العثور على فواتير تطابق البحث",
+                       en: "No invoices match your search" },
+  deptHalwaLabel:    { ar: "قسم حلا زفة و ضيافة", en: "Wedding Sweets" },
+  deptMawaliLabel:   { ar: "قسم معجنات و موالح", en: "Savory & Pastries" },
+  deptChocolateLabel:{ ar: "قسم شوكولاتة",       en: "Chocolate Dept." },
+  deptCakeLabel:     { ar: "قسم الكيك",          en: "Cake Dept." },
+  enteredByShort:    { ar: "أدخله:",             en: "By:" },
+  receivedHalwa:     { ar: "استلم الحلا زفة:",   en: "Wedding received:" },
+  receivedMawali:    { ar: "استلم المعجنات:",     en: "Savory received:" },
+  receivedChocolate: { ar: "استلم الشوكولاتة:",  en: "Chocolate received:" },
+  receivedCake:      { ar: "استلم الكيك:",       en: "Cake received:" },
+
+  // ── Admin ─────────────────────────────────────────────────────
+  overview:          { ar: "نظرة عامة",        en: "Overview" },
+  employeesMgmt:     { ar: "الموظفون",         en: "Employees" },
+  financialSummary:  { ar: "الملخص المالي",    en: "Financial Summary" },
+  totalInsurance:    { ar: "إجمالي التأمينات", en: "Total Insurance" },
+  todayInsurance:    { ar: "تأمينات اليوم",    en: "Today's Insurance" },
+  avgInsurance:      { ar: "متوسط التأمين",    en: "Avg. Insurance" },
+  invoicesWithIns:   { ar: "فواتير بتأمين",    en: "Invoices w/ Insurance" },
+  fromInvoices:      { ar: "من",               en: "from" },
+  invoice:           { ar: "فاتورة",           en: "invoice" },
+  workMonitor:       { ar: "مراقبة سير العمل", en: "Work Monitor" },
+  totalOrders:       { ar: "إجمالي الطلبات",  en: "Total Orders" },
+  todayOrders:       { ar: "طلبات اليوم",      en: "Today's Orders" },
+  allDone:           { ar: "مكتملة بالكامل",   en: "Fully Completed" },
+  inProgress:        { ar: "قيد التنفيذ",      en: "In Progress" },
+  total:             { ar: "إجمالي",           en: "Total" },
+  cashierPerf:       { ar: "أداء الكاشيرية",   en: "Cashier Performance" },
+  invoiceWord:       { ar: "فاتورة",           en: "invoice" },
+  recentInvoices:    { ar: "آخر الفواتير",     en: "Recent Invoices" },
+  employeeMgmtTitle: { ar: "إدارة الموظفين",   en: "Employee Management" },
+  adminSignInWarn:   { ar: "سجّل دخولك للاطلاع على البيانات الكاملة",
+                       en: "Sign in to view the full dashboard" },
+  deleteEmployee:    { ar: "حذف الموظف",       en: "Delete Employee" },
+  deleteEmpConfirm:  { ar: "هل تريد حذف",      en: "Are you sure you want to delete" },
+  unspecified:       { ar: "غير محدد",         en: "Unspecified" },
+  sar:               { ar: "ر.س",              en: "SAR" },
+  insurance_short:   { ar: "تأمين",            en: "Insurance" },
+
+  // ── Employee selector modal ───────────────────────────────────
+  noEmpYet:         { ar: "لا يوجد موظفون",   en: "No employees yet" },
+  addFirstEmp:      { ar: "اضغط \"إضافة موظف\" لإضافة أول موظف",
+                      en: "Tap \"Add Employee\" to add the first one" },
+  saving:           { ar: "جاري الحفظ...",     en: "Saving..." },
+  empNameRequired:  { ar: "أدخل اسم الموظف",  en: "Enter employee name" },
+  empIdRequired:    { ar: "أدخل الرقم الوظيفي", en: "Enter employee ID" },
+
+  // ── Misc ──────────────────────────────────────────────────────
+  insurance_amount_sar: { ar: "ر.س", en: "SAR" },
+} as const;
+
+export type TranslationKey = keyof typeof translations;
+
+export function t(key: TranslationKey, lang: Lang): string {
+  const entry = translations[key];
+  if (!entry) return key;
+  return (entry as any)[lang] ?? (entry as any)["ar"] ?? key;
+}
+
+export function roleLabel(role: string, lang: Lang): string {
+  const entry = (translations.roleLabels as any)[role];
+  if (!entry) return role;
+  return entry[lang] ?? entry["ar"] ?? role;
+}
+
+export default translations;
